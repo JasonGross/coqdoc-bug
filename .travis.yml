@@ -15,5 +15,7 @@ script:
   - coq_makefile Overture.v HomFunctor2.v -R . HoTT | make -f -
   - coqdoc -utf8 -html -R . HoTT HomFunctor2.v
   - cat HoTT.HomFunctor2.html
+  - cat Overture.glob
+  - cat HomFunctor2.glob
   - grep '<a name="lab2">' HoTT.HomFunctor2.html
   - grep --color='auto' -P -n "[\x80-\xFF]" HoTT.HomFunctor2.html
