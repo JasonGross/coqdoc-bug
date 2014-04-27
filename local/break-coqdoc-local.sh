@@ -29,7 +29,6 @@ LANG=en_US.UTF-8
 echo "Ensure that this comes out as unicode, C^op \times C \to:"
 echo -e "c\xE1\xB5\x92\xE1\xB5\x96 \xC3\x97 C \xE2\x86\x92"
 cat > HomFunctor2.v <<EOF
-EOF
 (** * Hom *)
 Require Import Overture.
 EOF
@@ -44,4 +43,3 @@ cat HomFunctor2.v
 
 grep '<a name="lab2">' HoTT.HomFunctor2.html
 grep --color='auto' -P -n "[\x80-\xFF]" HoTT.HomFunctor2.html
-EOF

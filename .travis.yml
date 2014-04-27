@@ -8,14 +8,6 @@ before_script:
   - echo | coqtop
 
 script:
-  - touch Overture.v
-  - export LANG=en_US.UTF-8
-  - echo "Ensure that this comes out as unicode, C^op \times C \to:"
-  - echo -e "c\xE1\xB5\x92\xE1\xB5\x96 \xC3\x97 C \xE2\x86\x92"
-  - echo '(** * Hom *)' > HomFunctor2.v
-  - echo 'Require Import Overture.' >> HomFunctor2.v
-  - echo -e "(** ** Definition of [hom : C\xE1\xB5\x92\xE1\xB5\x96 \xC3\x97 C \xE2\x86\x92 Set] as a functor *)" >> HomFunctor2.v
-  - echo >> HomFunctor2.v
   - cat Overture.v
   - cat HomFunctor2.v
   - coq_makefile Overture.v HomFunctor2.v -R . HoTT | make -f -
