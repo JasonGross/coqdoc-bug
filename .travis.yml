@@ -3,9 +3,11 @@ language: C
 before_script:
   - sudo apt-get update -q
   - sudo apt-get install -q coq
+  - gcc endian.c -o endian
 
 script:
   - uname -a
+  - ./endian
   - coqc --version
   - echo | coqtop
   - cat Overture.v

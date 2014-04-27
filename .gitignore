@@ -6,3 +6,7 @@
 *.d
 *.html
 *.css
+*.out
+endian
+local/variants/bad/*.v
+local/variants/good/*.v
