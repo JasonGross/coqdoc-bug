@@ -1,13 +1,13 @@
 language: C
 
 before_script:
-  - uname -a
   - sudo apt-get update -q
   - sudo apt-get install -q coq
-  - coqc --version
-  - echo | coqtop
 
 script:
+  - uname -a
+  - coqc --version
+  - echo | coqtop
   - cat Overture.v
   - cat HomFunctor2.v
   - coq_makefile Overture.v HomFunctor2.v -R . HoTT | make -f -
