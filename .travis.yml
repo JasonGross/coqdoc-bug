@@ -1,7 +1,7 @@
 language: C
 
 before_script:
-  - uname -q
+  - uname -a
   - sudo apt-get update -q
   - sudo apt-get install -q coq
   - coqc --version
